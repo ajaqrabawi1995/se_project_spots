@@ -3,12 +3,25 @@
   width: 413px;
   object-fit: cover;
   display: block;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .card {
   max-width: 413px;
+  margin: 0 auto;
 }
-.card_content {
+
+.card__title {
+  font-family: Poppins, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #212121;
+  margin-top: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,13 +31,21 @@
   background-image: url(../images/like.svg);
   width: 23px;
   height: 20px;
-  border: none;
   background-color: transparent;
+  border: none;
   opacity: 40%;
 }
-
+.card__like-button:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
+    width: 288px;
+  }
+  .card__title {
+    font-size: 16px;
+    line-height: 100%;
   }
 }

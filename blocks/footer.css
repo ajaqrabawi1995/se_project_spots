@@ -1,12 +1,15 @@
 .footer {
   display: flex;
   justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer__logo {
-  top: 1340px;
-  left: 668px;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
+  margin: 0;
+  opacity: 70%;
+  color: #212121;
 }
