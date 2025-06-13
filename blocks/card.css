@@ -4,10 +4,20 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
+
+/* New hover effect for better UX */
+.card__image:hover {
+  transform: scale(1.02); /* Slight zoom effect */
+  opacity: 0.9; /* Visual cue */
+}
+
 .card {
   max-width: 413px;
   margin: 0 auto;
+  position: relative;
 }
 
 .card__title {
@@ -17,9 +27,11 @@
   line-height: 120%;
   color: #212121;
   margin-top: 12px;
+  margin-bottom: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  max-width: 390px;
 }
 .card__content {
   display: flex;
@@ -35,8 +47,37 @@
   border: none;
   opacity: 40%;
 }
+
+.card__like-button_active {
+  background-image: url(../images/like_active.svg);
+  opacity: 90%;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+}
+
+.card__like-button_active:hover {
+  background-image: url(../images/likedd.svg);
+  background-color: transparent;
+  opacity: 100%;
+}
 .card__like-button:hover {
   opacity: 100%;
+  cursor: pointer;
+}
+
+.card__delete-button {
+  background-image: url(../images/delete.svg);
+  width: 32px;
+  height: 32px;
+  right: 10px;
+  top: 10px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+}
+.card__delete-button:hover {
+  background-image: url(../images/deleted.svg);
   cursor: pointer;
 }
 @media screen and (max-width: 627px) {
@@ -47,5 +88,6 @@
   .card__title {
     font-size: 16px;
     line-height: 100%;
+    max-width: 240px;
   }
 }
